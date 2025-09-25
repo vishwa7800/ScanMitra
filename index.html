@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScanMitra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS CDN, not JavaScript logic -->
+  <style>
+    @keyframes navbarFadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .navbar-animate {
+      animation: navbarFadeIn 1s ease;
+    }
+  </style>
+</head>
+<body class="bg-[#18191a] text-gray-100 font-sans">
+  <!-- NAVBAR SECTION -->
+  <nav class="navbar-animate flex justify-between items-center px-8 py-4 bg-[#23272b] shadow-lg w-full">
+    <div class="text-2xl font-extrabold text-yellow-400 tracking-wide">ScanMitra</div>
+    <div class="flex gap-8 text-base font-medium">
+      <a href="index.html" class="text-gray-100 hover:text-yellow-400 transition">Home</a>
+      <a href="signin.html" class="text-gray-100 hover:text-yellow-400 transition">Sign In</a>
+      <a href="#about" class="text-gray-100 hover:text-yellow-400 transition">About</a>
+      <a href="contact.html" class="text-gray-100 hover:text-yellow-400 transition">Contact</a>
+      <a href="feedback.php" class="text-gray-100 hover:text-yellow-400 transition">Feedback</a>
+    </div>
+  </nav>
+
+  <div class="flex flex-col md:flex-row gap-8 px-8 py-8">
+    <!-- SIDEBAR INFO SECTION -->
+    <aside class="bg-[#23272b] rounded-2xl shadow-lg p-8 w-full md:w-1/3 flex flex-col items-center md:items-start">
+      <!-- Logo and Slogan -->
+      <div class="mb-6 w-full h-48 rounded-xl flex flex-col justify-center items-center relative overflow-hidden" style="background: url('img.png') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-[#23272b] bg-opacity-70"></div>
+        <div class="relative z-10 text-center w-full">
+          <h1 class="text-3xl font-bold text-yellow-400 mb-2">ScanMitra</h1>
+          <p class="text-lg text-gray-300">Smart Queueing for diagnostic centers and Clients</p>
+        </div>
+      </div>
+      <!-- About Info -->
+      <section id="about" class="w-full mt-6">
+        <h2 class="text-xl font-bold mb-2 text-yellow-400">About ScanMitra</h2>
+        <p class="mb-4 text-gray-300">ScanMitra is your companion for hassle-free visits to diagnostic centers. It simplifies the process of getting ultrasounds, X-rays, or sonography by connecting patients directly with centers for real-time slot booking.</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+          <li>Book slots remotely with your phone</li>
+          <li>Get real-time updates on your appointment status</li>
+          <li>No app downloads needed</li>
+          <li>Simple phone number login</li>
+          <li>Save time, reduce stress, and avoid long waits</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- MAIN SHOPS SECTION -->
+    <main class="flex-1">
+      <h3 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Available Diagnostic Centers Nearby</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- SHOP CARD 1 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop1.jpg" alt="NewModern" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈NewModern</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐⭐☆</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 40 mins</p>
+              <p><strong>Available Slots:</strong> 6</p>
+              <p><strong>Rating:</strong> 4.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-yellow-400 text-[#23272b] rounded-lg font-semibold shadow hover:bg-yellow-500 transition">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-NewModern.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+        <!-- SHOP CARD 2 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop2.jpg" alt="Sunrays" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈Sunrays</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 60 mins</p>
+              <p><strong>Available Slots:</strong> 2</p>
+              <p><strong>Rating:</strong> 5.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-yellow-400 text-[#23272b] rounded-lg font-semibold shadow hover:bg-yellow-500 transition">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-Sunrays.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+        <!-- SHOP CARD 3 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop3.jpg" alt="Sahara" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈Sahara</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐☆☆</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 60 mins</p>
+              <p><strong>Available Slots:</strong> 0 (Full)</p>
+              <p><strong>Rating:</strong> 3.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button disabled class="px-4 py-2 bg-gray-300 text-gray-500 rounded-lg font-semibold shadow">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-Sahara.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+        <!-- SHOP CARD 4 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop4.jpg" alt="StarCenter" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈StarCenter</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐⭐☆</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 45 mins</p>
+              <p><strong>Available Slots:</strong> 5</p>
+              <p><strong>Rating:</strong> 4.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-yellow-400 text-[#23272b] rounded-lg font-semibold shadow hover:bg-yellow-500 transition">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-StarCenter.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+        <!-- SHOP CARD 5 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop5.jpg" alt="IrisCenter" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈IrisCenter</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 30 mins</p>
+              <p><strong>Available Slots:</strong> 7</p>
+              <p><strong>Rating:</strong> 5.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-yellow-400 text-[#23272b] rounded-lg font-semibold shadow hover:bg-yellow-500 transition">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-IrisCenter.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+        <!-- SHOP CARD 6 -->
+        <div class="bg-[#23272b] rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+          <img src="shop6.jpg" alt="MedRay" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-lg text-yellow-400">💈MedRay</span>
+              <span class="text-yellow-400 font-bold">⭐⭐⭐⭐☆</span>
+            </div>
+            <div class="text-sm text-gray-300 mb-4">
+              <p><strong>Waiting Time:</strong> 60 mins</p>
+              <p><strong>Available Slots:</strong> 5</p>
+              <p><strong>Rating:</strong> 4.0</p>
+            </div>
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-yellow-400 text-[#23272b] rounded-lg font-semibold shadow hover:bg-yellow-500 transition">Book Now</button>
+              <!-- Inline JS: Redirects to estimate page -->
+              <button class="px-4 py-2 bg-gray-700 text-yellow-400 rounded-lg font-semibold shadow hover:bg-gray-600 transition" onclick="window.location.href='estimate-MedRay.php'">Estimate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- CLIENT REVIEWS SECTION -->
+  <section class="bg-[#292c31] px-6 py-10 border-b-4 border-yellow-400 border-t-4">
+    <h3 class="text-xl text-center font-semibold mb-6 text-yellow-400">Client Reviews</h3>
+    <div class="relative overflow-hidden">
+      <div class="flex gap-6 animate-[scroll_25s_linear_infinite] w-max">
+        <div class="min-w-[250px] bg-[#23272b] rounded-lg shadow p-4 text-gray-100">
+          ⭐⭐⭐⭐⭐<br>“Loved how quick the service was!”<br><span class="text-xs text-yellow-400">– Ramesh</span>
+        </div>
+        <div class="min-w-[250px] bg-[#23272b] rounded-lg shadow p-4 text-gray-100">
+          ⭐⭐⭐⭐☆<br>“No more waiting in line, amazing system.”<br><span class="text-xs text-yellow-400">– Priya</span>
+        </div>
+        <div class="min-w-[250px] bg-[#23272b] rounded-lg shadow p-4 text-gray-100">
+          ⭐⭐⭐⭐⭐<br>“Very convenient, will recommend!”<br><span class="text-xs text-yellow-400">– Ahmed</span>
+        </div>
+        <div class="min-w-[250px] bg-[#23272b] rounded-lg shadow p-4 text-gray-100">
+          ⭐⭐⭐⭐☆<br>“Nice ambience and professional staff.”<br><span class="text-xs text-yellow-400">– Kavita</span>
+        </div>
+        <div class="min-w-[250px] bg-[#23272b] rounded-lg shadow p-4 text-gray-100">
+          ⭐⭐⭐⭐⭐<br>“Booked easily and no waiting at all!”<br><span class="text-xs text-yellow-400">– Raj</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="bg-[#23272b] text-yellow-400 text-center py-6 text-base w-full">
+    <p>&copy; 2025 ScanMitra. All rights reserved.</p>
+  </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScanMitra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<!-- External JS file for booking functionality -->
+<script src="bookNow.js"></script>
+
+<!-- Inline JS: Loads and parses about.xml, updates info section -->
+<script>
+  fetch('about.xml')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(data, "application/xml");
+
+      const heading = xml.querySelector("heading").textContent;
+      const paragraph = xml.querySelector("paragraph").textContent;
+      const features = xml.querySelectorAll("feature");
+
+      const container = document.querySelector("#info-section .max-w-4xl");
+
+      let html = `
+        <h3 class="text-xl font-semibold border-b-2 border-blue-400 pb-2 mb-4">${heading}</h3>
+        <p class="mb-4">${paragraph}</p>
+        <ul class="list-disc pl-6 text-left space-y-2">
+      `;
+
+      features.forEach(f => {
+        html += `<li>${f.textContent}</li>`;
+      });
+
+      html += `</ul>`;
+
+      container.innerHTML = html;
+    })
+    .catch(error => {
+      console.error("Failed to load XML:", error);
+      document.querySelector("#info-section .max-w-4xl").innerHTML = `<p class="text-red-500">Failed to load info section.</p>`;
+    });
+</script>
+</body>
+</html>
